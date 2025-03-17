@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         
+            const numeroAleatorio = Math.floor(Math.random() * 10) + 1;
+            let tentativa;
+            let tentativas = 0;
+
+            do {
+                tentativa = parseInt(prompt("Adivinhe um número entre 1 e 10:"));
+                tentativas++;
+
+                if (tentativa < 1 || tentativa > 10) {
+                    alert("Por favor, digite um número entre 1 e 10.");
+                } else if (tentativa < numeroAleatorio) {
+                    alert("Muito baixo .");
+                } else if (tentativa > numeroAleatorio) {
+                    alert("Muito alto .");
+                } else {
+                    alert(`Você adivinhou o número ${numeroAleatorio} em ${tentativas} tentativas.`);
+                }
+            } while (tentativa !== numeroAleatorio);
+        
+    </script>
+</body>
+</html>

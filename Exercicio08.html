@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+       const usuarioCorreto = "usuario123";
+            const senhaCorreta = "senha123";
+
+            let usuario;
+            let senha;
+
+            
+            do {
+                usuario = prompt("Digite seu nome de usuário:");
+                senha = prompt("Digite sua senha:");
+
+                if (usuario !== usuarioCorreto || senha !== senhaCorreta) {
+                    alert("Nome de usuário ou senha incorretos. Tente novamente.");
+                }
+            } while (usuario !== usuarioCorreto || senha !== senhaCorreta);
+
+            alert("Login bem-sucedido! Bem-vindo, " + usuario + "!");
+         
+    </script>
+</body>
+</html>
